@@ -20,8 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func findButton(_ sender: UIButton) {
-        goServersLabel.text = domainField.text
-        domainField.text = ""
+        print(self.domainField.text!)
+        self.domainField.text = ""
     }
 }
 
