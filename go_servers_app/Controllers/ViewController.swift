@@ -48,12 +48,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     self.domainInfoTxt.text.append("Server Changed: \t\tNo\n")
                 }
-                self.serversInfoTxt.text = ""
+                self.serversInfoTxt.text = "Servers:\n\n"
                 domain.servers?.forEach { server in
                     self.serversInfoTxt.text.append("Owner: \t\(server.owner!)\n")
-                    self.serversInfoTxt.text.append("Owner: \t\(server.country!)\n")
-                    self.serversInfoTxt.text.append("Owner: \t\(server.address!)\n")
-                    self.serversInfoTxt.text.append("Owner: \t\(server.sslGrade!)\n")
+                    self.serversInfoTxt.text.append("Countr: \t\(server.country!)\n")
+                    self.serversInfoTxt.text.append("Address: \t\(server.address!)\n")
+                    self.serversInfoTxt.text.append("Ssl Grade: \t\(server.sslGrade!)\n")
                     self.serversInfoTxt.text.append("\n\n")
                 }
                 self.domainField.text = ""

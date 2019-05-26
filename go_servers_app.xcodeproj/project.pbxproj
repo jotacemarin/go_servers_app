@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		69891D1173EFF84BD4C07E64 /* Pods_go_servers_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BE2C21575EB07DF009DF2B /* Pods_go_servers_appTests.framework */; };
 		7A197F9F229AF026009C14CB /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A197F9E229AF026009C14CB /* HistoryController.swift */; };
+		7A197FA4229B3096009C14CB /* DomainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A197FA3229B3096009C14CB /* DomainTableViewCell.swift */; };
 		7A28C6BC2299159E00912C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A28C6BB2299159E00912C7E /* AppDelegate.swift */; };
 		7A28C6BE2299159E00912C7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A28C6BD2299159E00912C7E /* ViewController.swift */; };
 		7A28C6C12299159E00912C7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A28C6BF2299159E00912C7E /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		09139186A450408206647E00 /* Pods-go_servers_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-go_servers_app.debug.xcconfig"; path = "Target Support Files/Pods-go_servers_app/Pods-go_servers_app.debug.xcconfig"; sourceTree = "<group>"; };
 		5D97EA883D7843319CE8C7E8 /* Pods-go_servers_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-go_servers_app.release.xcconfig"; path = "Target Support Files/Pods-go_servers_app/Pods-go_servers_app.release.xcconfig"; sourceTree = "<group>"; };
 		7A197F9E229AF026009C14CB /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		7A197FA3229B3096009C14CB /* DomainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTableViewCell.swift; sourceTree = "<group>"; };
 		7A28C6B82299159E00912C7E /* go_servers_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = go_servers_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A28C6BB2299159E00912C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A28C6BD2299159E00912C7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				7A28C6BD2299159E00912C7E /* ViewController.swift */,
 				7A197F9E229AF026009C14CB /* HistoryController.swift */,
+				7A197FA3229B3096009C14CB /* DomainTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				7AC766E9229A09A400DA78A8 /* Server.swift in Sources */,
 				7A28C6BC2299159E00912C7E /* AppDelegate.swift in Sources */,
 				7AC766EB229A0F1D00DA78A8 /* Domain.swift in Sources */,
+				7A197FA4229B3096009C14CB /* DomainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
