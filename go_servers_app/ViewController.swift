@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var goServersLabel: UILabel!
     @IBOutlet weak var domainField: UITextField!
+    
+    var apiBasePath: String = "http://localhost:4500/api/v1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        domainField.delegate = self
+        self.domainField.delegate = self
     }
 
     @IBAction func findButton(_ sender: UIButton) {
         print(self.domainField.text!)
-        self.domainField.text = ""
+        Alamofire.request("\(apiBasePath)/analyze?host=\(self.domainField.text!)").responseJSON { response in
+            if let json = response.result.value {
+                print("JSON: \(json)")
+                
+            }
+        }
     }
 }
 
