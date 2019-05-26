@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1061.25" y="32.74647887323944"/>
         </scene>
-        <!--View Controller-->
+        <!--History Controller-->
         <scene sceneID="Iw4-Oh-1pg">
             <objects>
-                <viewController id="i5c-nE-Z5y" sceneMemberID="viewController">
+                <viewController id="i5c-nE-Z5y" customClass="HistoryController" customModule="go_servers_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o3V-tZ-CbA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
