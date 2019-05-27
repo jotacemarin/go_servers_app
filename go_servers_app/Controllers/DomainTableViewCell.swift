@@ -12,7 +12,6 @@ class DomainTableViewCell: UITableViewCell {
     @IBOutlet weak var domainLogo: UIImageView!
     @IBOutlet weak var domainTitle: UILabel!
     @IBOutlet weak var domainInfo: UILabel!
-    @IBOutlet weak var domainServers: UILabel!
     
     
     override func awakeFromNib() {

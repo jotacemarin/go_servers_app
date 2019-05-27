@@ -55,15 +55,7 @@ class HistoryController: UITableViewController {
             cell.domainInfo.text?.append("Server Changed: No\n")
         }
         cell.domainInfo.text?.append("Previus Ssl Grade: \(domainRow.previusSslGrade!)\n")
-        cell.domainServers.text = "Servers:\n"
-        domainRow.servers?.forEach { server in
-            cell.domainServers.text?.append("Address: \(server.address!)\n")
-            cell.domainServers.text?.append("Owner: \(server.owner!)\n")
-            cell.domainServers.text?.append("Country: \(server.country!)\n")
-            cell.domainServers.text?.append("Ssl Grade: \(server.sslGrade!)\n")
-        }
-        
-        print("CELL: \(domainRow)")
+        print(cell.domainInfo.text!)
         return cell
     }
 }

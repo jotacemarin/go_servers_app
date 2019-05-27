@@ -127,17 +127,18 @@
         <!--History Controller-->
         <scene sceneID="LI1-XS-aRc">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4r-BL-Xot" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="gah-Ax-dr0" customClass="HistoryController" customModule="go_servers_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mfb-de-3Et">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mfb-de-3Et">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DomainTableViewCell" rowHeight="350" id="e52-d7-vKn" customClass="DomainTableViewCell" customModule="go_servers_app" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="350"/>
+                            <tableViewCell autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DomainTableViewCell" rowHeight="126" id="e52-d7-vKn" customClass="DomainTableViewCell" customModule="go_servers_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="126"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e52-d7-vKn" id="Ck7-Vi-6PJ" customClass="UITableViewCellContentView">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e52-d7-vKn" id="Ck7-Vi-6PJ" customClass="UITableViewCellContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="125.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdm-LW-cQV">
@@ -151,27 +152,19 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGh-D1-Mfp">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGh-D1-Mfp">
                                             <rect key="frame" x="124" y="40" width="180" height="71"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aiq-So-t7V">
-                                            <rect key="frame" x="16" y="119" width="288" height="220"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="domainInfo" destination="tGh-D1-Mfp" id="6Dt-8A-846"/>
                                     <outlet property="domainLogo" destination="Rdm-LW-cQV" id="gox-Zs-J0z"/>
-                                    <outlet property="domainServers" destination="aiq-So-t7V" id="Fia-T9-vai"/>
                                     <outlet property="domainTitle" destination="7Xm-eA-XjO" id="AKj-1H-cDe"/>
                                 </connections>
                             </tableViewCell>
@@ -183,7 +176,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q4r-BL-Xot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1923.75" y="32.74647887323944"/>
         </scene>
