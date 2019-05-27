@@ -16,6 +16,8 @@
 		7A28C6C32299159F00912C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A28C6C22299159F00912C7E /* Assets.xcassets */; };
 		7A28C6C62299159F00912C7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A28C6C42299159F00912C7E /* LaunchScreen.storyboard */; };
 		7A28C6D12299159F00912C7E /* go_servers_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A28C6D02299159F00912C7E /* go_servers_appTests.swift */; };
+		7A8B2751229B830700DD991E /* DomainDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B2750229B830700DD991E /* DomainDetailController.swift */; };
+		7A8B2753229B961100DD991E /* GoStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B2752229B961100DD991E /* GoStatus.swift */; };
 		7AC766E9229A09A400DA78A8 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC766E8229A09A400DA78A8 /* Server.swift */; };
 		7AC766EB229A0F1D00DA78A8 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC766EA229A0F1D00DA78A8 /* Domain.swift */; };
 		C8F138E3D424B3BE56C48C4F /* Pods_go_servers_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4E8BE2508B8F6BBD27F6FB /* Pods_go_servers_app.framework */; };
@@ -46,6 +48,8 @@
 		7A28C6CC2299159F00912C7E /* go_servers_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = go_servers_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A28C6D02299159F00912C7E /* go_servers_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = go_servers_appTests.swift; sourceTree = "<group>"; };
 		7A28C6D22299159F00912C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A8B2750229B830700DD991E /* DomainDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainDetailController.swift; sourceTree = "<group>"; };
+		7A8B2752229B961100DD991E /* GoStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoStatus.swift; sourceTree = "<group>"; };
 		7AC766E8229A09A400DA78A8 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		7AC766EA229A0F1D00DA78A8 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		88BE2C21575EB07DF009DF2B /* Pods_go_servers_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_go_servers_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +84,7 @@
 				7A28C6BD2299159E00912C7E /* ViewController.swift */,
 				7A197F9E229AF026009C14CB /* HistoryController.swift */,
 				7A197FA3229B3096009C14CB /* DomainTableViewCell.swift */,
+				7A8B2750229B830700DD991E /* DomainDetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			children = (
 				7AC766E8229A09A400DA78A8 /* Server.swift */,
 				7AC766EA229A0F1D00DA78A8 /* Domain.swift */,
+				7A8B2752229B961100DD991E /* GoStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,7 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A197F9F229AF026009C14CB /* HistoryController.swift in Sources */,
+				7A8B2751229B830700DD991E /* DomainDetailController.swift in Sources */,
 				7A28C6BE2299159E00912C7E /* ViewController.swift in Sources */,
+				7A8B2753229B961100DD991E /* GoStatus.swift in Sources */,
 				7AC766E9229A09A400DA78A8 /* Server.swift in Sources */,
 				7A28C6BC2299159E00912C7E /* AppDelegate.swift in Sources */,
 				7AC766EB229A0F1D00DA78A8 /* Domain.swift in Sources */,

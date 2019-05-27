@@ -9,11 +9,9 @@ class HistoryController: UITableViewController {
     
     override func viewDidLoad() {
     super.viewDidLoad()
-        // Do any additional setup after loading the view.
         Alamofire.request("\(apiBasePath)/history").responseString { response in
             if let json = response.result.value {
                 self.historyList = [Domain](json: json)
-                print("History: \(self.historyList.count)")
                 self.tableView.reloadData()
             }
         }
@@ -24,7 +22,6 @@ class HistoryController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Rows: \(self.historyList.count)")
         return self.historyList.count
     }
     
@@ -57,5 +54,11 @@ class HistoryController: UITableViewController {
         cell.domainInfo.text?.append("Previus Ssl Grade: \(domainRow.previusSslGrade!)\n")
         print(cell.domainInfo.text!)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DomainDetailController") as? DomainDetailController
+        vc?.domain = historyList[indexPath.row]
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
 }

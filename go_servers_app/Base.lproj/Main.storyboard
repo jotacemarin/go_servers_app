@@ -13,7 +13,7 @@
         <!--Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="go_servers_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="go_servers_app" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,8 @@
                         <outlet property="domainInfoTxt" destination="vCZ-2j-4Tt" id="dDL-aR-ofT"/>
                         <outlet property="domainLbl" destination="aUf-Jx-VS3" id="XOV-i4-hAO"/>
                         <outlet property="domainLogoImg" destination="SYU-NF-1Wu" id="nQc-SP-alb"/>
+                        <outlet property="findButton" destination="XrA-99-1Zb" id="k1y-eR-v8h"/>
+                        <outlet property="historyButton" destination="jaU-PG-vHe" id="9HL-HU-x1N"/>
                         <outlet property="serversInfoTxt" destination="Dwe-qO-Zd8" id="5ND-Ie-Opg"/>
                     </connections>
                 </viewController>
@@ -128,7 +130,7 @@
         <scene sceneID="LI1-XS-aRc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4r-BL-Xot" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="gah-Ax-dr0" customClass="HistoryController" customModule="go_servers_app" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gah-Ax-dr0" customClass="HistoryController" customModule="go_servers_app" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mfb-de-3Et">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,6 +180,74 @@
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1923.75" y="32.74647887323944"/>
+        </scene>
+        <!--Domain Detail Controller-->
+        <scene sceneID="Nk1-AQ-fQR">
+            <objects>
+                <viewController storyboardIdentifier="DomainDetailController" id="bI9-Ji-RMn" customClass="DomainDetailController" customModule="go_servers_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tgk-iJ-nbm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="6Mz-Hm-WSS">
+                                <rect key="frame" x="16" y="64" width="288" height="484"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XX7-Uq-Ff3">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="X68-Co-sku"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHH-3D-cLW">
+                                        <rect key="frame" x="0.0" y="26.5" width="288" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="iN1-UI-niY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9uu-Gj-oul">
+                                        <rect key="frame" x="0.0" y="160.5" width="288" height="323.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bHH-3D-cLW" firstAttribute="top" secondItem="XX7-Uq-Ff3" secondAttribute="bottom" constant="6" id="8Vp-Tu-zty"/>
+                                    <constraint firstItem="9uu-Gj-oul" firstAttribute="top" secondItem="bHH-3D-cLW" secondAttribute="bottom" constant="6" id="ATH-Ni-Ovq"/>
+                                    <constraint firstAttribute="trailing" secondItem="bHH-3D-cLW" secondAttribute="trailing" id="CH7-wx-jIg"/>
+                                    <constraint firstItem="bHH-3D-cLW" firstAttribute="top" secondItem="XX7-Uq-Ff3" secondAttribute="bottom" constant="6" id="JNy-It-rSX"/>
+                                    <constraint firstItem="9uu-Gj-oul" firstAttribute="top" secondItem="bHH-3D-cLW" secondAttribute="bottom" constant="6" id="M1L-ju-vf7"/>
+                                    <constraint firstItem="XX7-Uq-Ff3" firstAttribute="leading" secondItem="6Mz-Hm-WSS" secondAttribute="leading" id="Nwd-WI-m39"/>
+                                    <constraint firstItem="bHH-3D-cLW" firstAttribute="leading" secondItem="6Mz-Hm-WSS" secondAttribute="leading" id="XU7-xg-TE3"/>
+                                    <constraint firstItem="XX7-Uq-Ff3" firstAttribute="top" secondItem="6Mz-Hm-WSS" secondAttribute="top" id="bYh-tm-2sz"/>
+                                    <constraint firstAttribute="bottom" secondItem="9uu-Gj-oul" secondAttribute="bottom" id="gZf-Ue-ATb"/>
+                                    <constraint firstAttribute="trailing" secondItem="9uu-Gj-oul" secondAttribute="trailing" id="gdK-mq-Yax"/>
+                                    <constraint firstAttribute="trailing" secondItem="XX7-Uq-Ff3" secondAttribute="trailing" id="jKs-Ml-Zjh"/>
+                                    <constraint firstItem="9uu-Gj-oul" firstAttribute="leading" secondItem="6Mz-Hm-WSS" secondAttribute="leading" id="uLu-cb-SaG"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Mz-Hm-WSS" firstAttribute="top" secondItem="8lF-Yj-aer" secondAttribute="top" constant="44" id="8PM-Mj-ckm"/>
+                            <constraint firstItem="8lF-Yj-aer" firstAttribute="trailing" secondItem="6Mz-Hm-WSS" secondAttribute="trailing" constant="16" id="AP9-lx-6hQ"/>
+                            <constraint firstItem="6Mz-Hm-WSS" firstAttribute="leading" secondItem="8lF-Yj-aer" secondAttribute="leading" constant="16" id="OAX-v0-nX1"/>
+                            <constraint firstItem="8lF-Yj-aer" firstAttribute="bottom" secondItem="6Mz-Hm-WSS" secondAttribute="bottom" constant="20" id="SGr-bq-TgQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8lF-Yj-aer"/>
+                    </view>
+                    <connections>
+                        <outlet property="domainInfoTxt" destination="9uu-Gj-oul" id="xMQ-Yq-wcw"/>
+                        <outlet property="domainLogoImg" destination="bHH-3D-cLW" id="tfq-kk-EeV"/>
+                        <outlet property="domainTitleLbl" destination="XX7-Uq-Ff3" id="sVr-yr-pgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdM-QM-jsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2803.125" y="32.74647887323944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zXD-eG-COP">
