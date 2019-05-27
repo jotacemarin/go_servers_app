@@ -34,8 +34,36 @@ class HistoryController: UITableViewController {
             fatalError("The dequeued cell is not an instance of DomainTableViewCell.")
         }
         let domainRow = historyList[indexPath.row]
+        cell.domainTitle.text = ""
         cell.domainTitle.text = domainRow.title!
-        print("CELL: \(cell)")
+        Alamofire.request(domainRow.logo!, method: .get).responseImage { imageResponse in
+            guard let image = imageResponse.result.value else {
+                return
+            }
+            cell.domainLogo.image = image
+        }
+        cell.domainInfo.text = ""
+        cell.domainInfo.text?.append("Ssl Grade: \(domainRow.sslGrade!)\n")
+        if domainRow.isDown! {
+            cell.domainInfo.text?.append("Active: No\n")
+        } else {
+            cell.domainInfo.text?.append("Active: Yes\n")
+        }
+        if domainRow.serverChanged! {
+            cell.domainInfo.text?.append("Server Changed: Yes\n")
+        } else {
+            cell.domainInfo.text?.append("Server Changed: No\n")
+        }
+        cell.domainInfo.text?.append("Previus Ssl Grade: \(domainRow.previusSslGrade!)\n")
+        cell.domainServers.text = "Servers:\n"
+        domainRow.servers?.forEach { server in
+            cell.domainServers.text?.append("Address: \(server.address!)\n")
+            cell.domainServers.text?.append("Owner: \(server.owner!)\n")
+            cell.domainServers.text?.append("Country: \(server.country!)\n")
+            cell.domainServers.text?.append("Ssl Grade: \(server.sslGrade!)\n")
+        }
+        
+        print("CELL: \(domainRow)")
         return cell
     }
 }
